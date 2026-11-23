@@ -9,7 +9,7 @@ Developed by **SIZH IT Solutions**.
 
 <br>
 
-![Version](https://img.shields.io/badge/version-0.1.8%20%E2%80%94%20first%20public%20release-5B6CFF?style=flat-square)
+![Version](https://img.shields.io/badge/version-0.1.9-5B6CFF?style=flat-square)
 ![Platform](https://img.shields.io/badge/Windows-10%20%7C%2011%20%C2%B7%20x64-0B1020?style=flat-square&logo=windows&logoColor=white)
 ![Status](https://img.shields.io/badge/installer-not%20code--signed-F5A524?style=flat-square)
 
@@ -146,13 +146,13 @@ Also included: a recorded **IVR menu** for outgoing calls, and a **Setup** check
 
 ## Install
 
-1. **Download** `SimDialAI-Setup-0.1.8.exe` from the [official Releases page](https://github.com/sizh-it-solutions/SimDialAI-Released/releases/latest).
+1. **Download** `SimDialAI-Setup-0.1.9.exe` from the [official Releases page](https://github.com/sizh-it-solutions/SimDialAI-Released/releases/latest).
 2. **Verify the checksum** in PowerShell. The result must match exactly:
    ```powershell
-   Get-FileHash .\SimDialAI-Setup-0.1.8.exe -Algorithm SHA256
+   Get-FileHash .\SimDialAI-Setup-0.1.9.exe -Algorithm SHA256
    ```
    ```text
-   57732f94e4e1d38bdac2245757ecb1031a879d453941b12b9dbb2ab8c52b4215
+   9abea86570c376fcf51259def05dfbbf42da979d4cc3bf4d07f93eee76b49e62
    ```
    If it differs, do not run the file.
 3. **Run the installer.** It installs for the current Windows user and does not ask for administrator rights. You choose where your data is kept.
@@ -170,17 +170,26 @@ Also included: a recorded **IVR menu** for outgoing calls, and a **Setup** check
 
 <br>
 
-## Important notices for version 0.1.8
+## What is new in 0.1.9
 
-This is the first public release. Please read these points before you install:
+- **Campaigns:** a guided five-step campaign builder, a campaign list with progress cards, and a call record that opens with the sales outcome, the meeting details (shown only when a meeting is really recorded, never inferred), what happened and the next steps. A reusable campaign prompt template lets one agent serve any industry.
+- **Voice agent:** the agent takes its name and company from the campaign, sells by example, answers questions directly, and no longer promises a callback or meeting that nothing scheduled. Hindi replies are written in Devanagari and spoken in whole phrases.
+- **Reliability:** clearer network error causes and provider alerts that clear when service returns, a dashboard that moves to a free port when its preferred port is taken, and a clearer record of why an agent did not attach to a call.
+- **SMS and privacy:** messages are captured as they arrive, a conversation view, and encryption at rest for SMS and campaign data.
+
+<br>
+
+## Important notices for version 0.1.9
+
+Please read these points before you install:
 
 - **The installer is not code-signed.** Windows SmartScreen may show "Windows protected your PC". If the checksum above matches, choose *More info*, then *Run anyway*.
-- **Automatic in-app updates are not available in 0.1.8.** To move to a newer version, download and run its setup program.
+- **Automatic in-app updates are not available.** To move to a newer version, download and run its setup program.
 - **The modem driver is not bundled.** Install it yourself.
-- **Windows Sandbox installation testing was not performed** for this release.
-- **Real-modem testing was not repeated** with this exact installer.
+- **Installation on a clean machine (Windows Sandbox) was not performed** for this release. The installed program was checked by the publisher on a real computer with a modem.
 - **Upgrading over an existing installation was not re-tested** on this build. It is designed to keep your data; back it up first if it matters.
 - Human Handoff, the AI agent and call recording are **off by default** and each needs an explicit switch. Recording people may require notice or consent where you are.
+- The agent cannot schedule meetings or callbacks by itself; what a caller prefers is kept for your team to act on.
 
 The release notes of each version state exactly what was tested and what is known to be missing.
 
